@@ -43,7 +43,7 @@ console.log("\nNovo tamanho do array: ", produtos.length)
 const produto = produtos.find(p => p.id === 3);
 
 if (produto) {
-  console.log(`O produto do ID 3 é ${produto.nome}`);
+  console.log(`O produto do ID 3 é a/o ${produto.nome}`);
 }
 
 //50+ reais
