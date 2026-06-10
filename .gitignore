@@ -1,3 +1,5 @@
 node_modules
 .vscode
 aula.js
+package-lock.json
+package.json
