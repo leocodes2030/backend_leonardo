@@ -1,4 +1,3 @@
-// 1. Criando o array inicial de alunos
 const alunos = [
   { nome: "Ana", nota: 8.5 },
   { nome: "Pedro", nota: 6.0 },
@@ -7,7 +6,6 @@ const alunos = [
   { nome: "Beatriz", nota: 7.0 }
 ];
 
-// 2. Usando .map() para adicionar a propriedade 'situacao'
 const alunosComSituacao = alunos.map(aluno => {
   return {
     ...aluno,
