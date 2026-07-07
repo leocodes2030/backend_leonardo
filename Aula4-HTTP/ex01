@@ -2,3 +2,5 @@
 
 R: Funciona como uma conversa, o cliente é quem pede uma informação, e o servidor vai lá e responde.
 
+ - O cliente sendo por exemplo um navegador, um aplicativo de celular, ou um jogo.
+ - Enquanto isso, o servidor é o programa que fica esperando pedidos e devolve dados. 
