@@ -1,0 +1,5 @@
+4. Um cliente fez GET /usuarios/50 mas esse usuário não existe no servidor. Qual status code o servidor
+deve responder?
+
+R:
+    404 Not Found

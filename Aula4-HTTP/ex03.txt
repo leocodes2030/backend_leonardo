@@ -1,0 +1,12 @@
+3. O que significa cada status code?
+    a) 200
+    b) 201
+    c) 404
+    d) 500
+
+R:
+    a) Deu tudo certo
+    b) Criado com sucesso
+    c) O cliente mandou dados errados
+    d) O recurso não foi encontrado
+    e) O servidor quebrou (erro no código do servidor)  

@@ -1,0 +1,11 @@
+2.Qual verbo HTTP você usaria para cada situação abaixo?
+    a) Ver todos os produtos de uma loja
+    b) Cadastrar um produto novo
+    c) Apagar um produto
+    d) Mudar o preço de um produto
+
+R:
+    a) GET
+    b) POST
+    c) DELETE
+    d) PUT

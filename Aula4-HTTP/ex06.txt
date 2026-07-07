@@ -1,0 +1,4 @@
+6. Explique com suas palavras por que dizemos que o JSON é parecido com um objeto JavaScript.
+
+R:
+    Por conta dos formatos de objetos e formulas que são muito parecidos com o JavaScript

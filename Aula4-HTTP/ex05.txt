@@ -1,0 +1,9 @@
+5. Escreva, no formato JSON, um objeto que represente um produto com as propriedades: id, nome e
+preço.
+
+R: 
+    {
+    "id": 1 ,
+    "nome": "Cama" ,
+    "preco": 600.00
+    }
