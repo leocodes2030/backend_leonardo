@@ -10,7 +10,7 @@ let produtos = [
     {id: 2, nome: "Mouse", preco: 89.90}
 ]
 
-let proximoId = 3;
+let proximoId = 3
 
 //Exercicio 02
 
@@ -72,8 +72,17 @@ app.put('/produtos/:id', (req, res) => {
     res.json(produto);
 });
 
-app.put('/produtos/:id', (req, res) => {
-    
+app.delete('/produtos/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const produto = produtos.find(a => a.id === id)
+
+    if (!produto) {
+        return res.status(404).json({ erro: "Produto não encontrado" })
+    }
+
+    produtos = produtos.filter(a => a.id !==id)
+
+    res.json({ mensagem: "Produto removido com êxito!"})
 })
 
 app.listen(3000, () => {
