@@ -22,14 +22,19 @@ app.get('/produtos', (req, res) => {
 
 app.get('/produtos/:id', (req, res) => {
     const id = Number(req.params.id);
-    const produto = produtos.find(a => a.id === id);
 
     if (Number.isNaN(id)) {
-        return res.status(400).json({ erro: "O parâmetro 'id' é inválido." });
+        return res.status(400).json({
+            erro: "O parâmetro 'id' é inválido."
+        });
     }
 
-    if(!produto) {
-        return res.status(404).json({ erro: "Produto não encontrado." });
+    const produto = produtos.find(a => a.id === id);
+
+    if (!produto) {
+        return res.status(404).json({
+            erro: "Produto não encontrado."
+        });
     }
 
     res.json(produto);
@@ -39,17 +44,32 @@ app.get('/produtos/:id', (req, res) => {
 
 app.post('/produtos/produtoNovo', (req, res) => {
     
+    console.log(req.body);
+
     const novoProduto = {
         id: proximoId,
         nome: req.body.nome,
         preco: req.body.preco
     }
 
+    if (!novoProduto.nome) {
+        return res.status(400).json({ erro: "O campo 'nome' é obrigatório." });
+    }
+
+    if (novoProduto.preco === undefined || novoProduto.preco === null || isNaN(novoProduto.preco)) {
+        return res.status(400).json({ erro: "O campo 'preco' é obrigatório." });
+    }
+
+    if (isNaN(novoProduto.preco) || novoProduto.preco < 0) {
+        return res.status(400).json({
+            erro: "O preço deve ser um número e não pode ser negativo."
+        })
+    }
+
     produtos.push(novoProduto);
     proximoId++;
 
-    res.status(201).json(novoProduto)
-    res.json(produtos)
+    res.status(201).json(novoProduto);
 })
 
 // Exercicio 05
@@ -57,9 +77,15 @@ app.post('/produtos/produtoNovo', (req, res) => {
 app.put('/produtos/:id', (req, res) => {
     const id = Number(req.params.id);
 
+    if (Number.isNaN(id)) {
+        return res.status(400).json({
+            erro: "O parâmetro 'id' é inválido."
+        });
+    }
+
     const produto = produtos.find(a => a.id === id);
 
-    if(!produto) {
+    if (!produto) {
         return res.status(404).json({
             erro: "Produto não encontrado"
         });
@@ -70,6 +96,8 @@ app.put('/produtos/:id', (req, res) => {
 
     res.json(produto);
 });
+
+// Exercicio 06
 
 app.delete('/produtos/:id', (req, res) => {
     const id = Number(req.params.id)
