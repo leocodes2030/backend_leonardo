@@ -1,0 +1,14 @@
+###mostrar tudo
+http://localhost:3000/usuarios
+
+###id 7
+http://localhost:3000/usuarios/7
+
+###novo usuario
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+    "nome" : "Leonardo",
+    "idade" : 22
+}
