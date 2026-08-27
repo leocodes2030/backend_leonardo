@@ -1,0 +1,11 @@
+req.params é usado para pegar informações que fazem parte do caminho da URL, geralmente para identificar um recurso específico.
+
+Exemplo:
+
+GET /filmes/10
+
+req.query é usado para pegar informações que vêm depois do ? na URL, geralmente para filtros, pesquisas ou opções.
+
+Exemplo:
+
+GET /filmes?genero=acao

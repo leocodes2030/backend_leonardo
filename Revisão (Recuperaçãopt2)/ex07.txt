@@ -1,0 +1,13 @@
+app.post('/filmes', (req, res) => {
+    const { titulo } = req.body;
+
+    if (!titulo) {
+        res.status(400).json({ erro: "titulo e obrigatorio" });
+    }
+
+    const novoFilme = { id: proximoId++, titulo };
+    filmes.push(novoFilme);
+    res.status(201).json(novoFilme);
+});
+
+falta interromper o fluxo após o res.status(400).json(...). Deveria-se ter um return antes do res status e tals.

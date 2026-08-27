@@ -1,0 +1,6 @@
+2. Associe cada status code à sua situação:
+Status Situação
+1) 200 (201) Recurso criado com sucesso
+2) 201 (400) Requisição com dado inválido/faltando
+3) 400 (200) Requisição bem-sucedida (leitura/atualização)
+4) 404 (404) Recurso não encontrado

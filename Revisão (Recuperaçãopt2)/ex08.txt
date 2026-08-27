@@ -1,0 +1,29 @@
+400 (Bad Request): a requisição enviada pelo cliente está incorreta ou inválida.
+404 (Not Found): a requisição está válida, mas o recurso solicitado não foi encontrado.
+Exemplos na API de filmes
+
+400 — Requisição inválida:
+
+O usuário tenta cadastrar um filme sem informar o título:
+
+{
+    "titulo": ""
+}
+
+A API pode responder:
+
+400 Bad Request
+
+Porque o problema está nos dados enviados pelo cliente.
+
+404 — Recurso não encontrado:
+
+O usuário tenta buscar o filme de ID 50:
+
+GET /filmes/50
+
+Mas não existe nenhum filme com esse ID.
+
+A API pode responder:
+
+404 Not Found

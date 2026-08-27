@@ -1,0 +1,18 @@
+9. Assinale a alternativa correta em cada item.
+    a) Qual é a versão arrow function equivalente a function dobro(n) { return n * 2; }?
+        (A) const dobro = n => return n * 2;
+        ✓ (B) const dobro = (n) => n * 2; 
+        (C) const dobro = n -> n * 2;
+        (D) const dobro = function => n * 2;
+
+    b) Numa rota app.get(’/filmes/:id’, ...), o valor de id vem de:
+        (A) req.body 
+        ✓ (B) req.params 
+        (C) req.query 
+        (D) req.headers
+
+    c) O que imprime console.log("5"=== 5)?
+        (A) true
+        ✓ (B) false 
+        (C) 5 
+        (D) gera erro

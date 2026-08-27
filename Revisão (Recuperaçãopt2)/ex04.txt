@@ -1,0 +1,1 @@
+app.use(express.json()) faz o Express conseguir interpretar dados enviados em formato JSON. Ele é necessário antes das rotas que usam req.body, pois é através dele que o servidor consegue acessar os dados enviados pelo cliente.

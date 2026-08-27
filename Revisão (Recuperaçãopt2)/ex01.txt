@@ -1,0 +1,21 @@
+1. Assinale a alternativa correta em cada item.
+a) Qual verbo HTTP é usado para criar um novo recurso?
+
+(A) GET
+✓ (B) POST
+(C) PUT
+(D) DELETE
+
+b) Qual status code indica sucesso na criação de um recurso?
+
+(A) 200
+✓ (B) 201
+(C) 204
+(D) 400
+
+c) Qual status code indica que o cliente enviou dados inválidos ou incompletos?
+
+✓ (A) 400
+(B) 403
+(C) 404
+(D) 500

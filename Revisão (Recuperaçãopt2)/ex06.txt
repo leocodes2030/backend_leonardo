@@ -1,0 +1,11 @@
+app.get('/filmes/:id', (req, res) => {
+    const id = req.params.id;
+    const filme = filmes.find(f => f.id === id);
+    res.json(filme);
+});
+
+// filmes = [{ id: 1, titulo: "Matrix" }, { id: 2, titulo: "Shrek" }]
+// chamada: GET /filmes/1
+
+falta o number() em const id = req.params.id
+não existe checagem para existencia ou não do filme 

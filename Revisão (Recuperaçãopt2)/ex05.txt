@@ -1,0 +1,12 @@
+app.get('/filmes/:id', (req, res) => {
+    const id = Number(req.params.id);
+    const filme = filmes.find(f => f.id === id);
+
+    if (!filme) {
+        return res.status(404).json({ erro: "filme nao encontrado" });
+    }
+
+    res.json(filme);
+});
+
+//procura um id na request do http, que é guardada em uma variavel chamada ia por meio de um req.params, e depois cria uma variavel temporaria chamada "filme" que guarda o filme com o exato id da url por meio de uma rota .find, e se ele não encontrar, ele cai no if, que checa se o filme existe realmente no array, entretanto.
